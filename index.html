@@ -24,8 +24,8 @@ canvas { width: 100%; height: 100% ; vertical-align:bottom; margin: 0; z-index: 
 	scroll-behavior: smooth;
 	word-wrap: normal;
 	overflow-y: auto; 
-  	padding: 0vh 3vw;
-	border-radius: 5%;
+  	padding: 0vh 1vw;
+	border-radius: 2%;
 }
 b{
 	background-color: rgb(50,50,50);
@@ -56,19 +56,35 @@ figcaption{
   color: white;
 }
 
-.controls{
-	background-color: rgb(36, 36, 36);
-	position: absolute;
-	color: white;
-	border-radius: 10px;
-	left: 0px;
-	bottom: 0px;
-	height: 40vh;
-	width: 16vw;
-	scroll-behavior: smooth;
-	word-wrap: normal;
-	overflow-y: auto; 
-	padding: 1px;
+.controls {
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    position: fixed;
+    transition: 0.5s ease;
+    bottom: -600px; /* or something else*/
+}
+
+.controls:hover{
+    bottom: 0px;
+}
+
+.controls::before {
+    content: " ↑ Controls ";
+    position: fixed;
+    background: white;
+    color: black;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 900;
+    bottom: 0px;
+    transition: 1.5s ease;
+}
+
+.controls:hover::before{ /* hide it */
+    bottom: -100px;
 }
 
 button{
@@ -148,7 +164,7 @@ a.basic:hover {color:#ffcc00;}
 <figcaption>Source: Wikepedia</figcaption>
 
 <br>
-<p1>The moon. The big piece of rock flying through the sky. The host of the lady on it. An endless suply of cheese. A common symbol of many myths. How did such a thing come to creation? What is it really?</p1>
+<p1>The moon. The big piece of rock flying through the sky. The host of the lady on it. An endless supply of cheese. A common symbol of many myths. How did such a thing come to creation? What is it really?</p1>
 <br>
 
 <p1>With the tools of our handy simulation (to the left), we shall explore such questions, about what exactly is the flying sphere of light in the sky made of.</p1>
@@ -200,7 +216,7 @@ a.basic:hover {color:#ffcc00;}
 
 <h2 id = "credits">Credits: </h2>
 <p1 id = "credbuttons">
-	This was a science project made by <a href = "https://github.com/coderz75">Coderz75</a> using the <a href = "https://threejs.org/">Threejs</a> library. I hope you like it!<br><br>
+	This was a science project made by <a href = "https://github.com/coderz75">Coderz75</a> using the <a href = "https://threejs.org/">Threejs</a> library. A call out to <a href = "https://github.com/actiniumn404">Actiniumn404</a> for css help!. I hope you like it!<br><br>
 	Many sources was used for this project: <br><br> </p1> <br> <br>
 <p1>If you really want, here's it in boring old list form</p1>
 <ul id="creditlist"></ol>
