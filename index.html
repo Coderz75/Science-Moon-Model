@@ -454,11 +454,6 @@ function onResize() {
 	for (let i = 0; i < collection.length; i++) {
 		collection[i].style.width = ((1-canvas_size) * 100).toString() + "vw";
 	}
-	let controls = document.getElementsByClassName("controls");
-	for (let i = 0; i < controls.length; i++) {
-		controls[i].style.width = (16).toString() + "vw";
-		controls[i].style.height = (40).toString() + "vh";
-	}
 }
 
 window.addEventListener('resize', onResize, false);
