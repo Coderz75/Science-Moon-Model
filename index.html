@@ -59,10 +59,13 @@ figcaption{
 .controls {
     width: fit-content;
     height: fit-content;
-    padding: 20px;
+    padding: 1.5vh 1.2vw;
     position: fixed;
     transition: 0.5s ease;
     bottom: -600px; /* or something else*/
+	background-color: rgb(36,36,36);
+	color: white;
+	border-radius: 20px;
 }
 
 .controls:hover{
@@ -72,10 +75,10 @@ figcaption{
 .controls::before {
     content: " ↑ Controls ";
     position: fixed;
-    background: white;
-    color: black;
+    background: rgb(36,36,36);
+    color: white;
     cursor: pointer;
-    padding: 20px;
+    padding: 2vh 1.2vw;
     border-radius: 10px;
     font-size: 24px;
     font-weight: 900;
